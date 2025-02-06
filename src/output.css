@@ -793,6 +793,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-1\/2 {
+    height: calc(1/2 * 100%);
+  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -1322,6 +1325,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-s {
     border-start-start-radius: 0.25rem;
     border-end-start-radius: 0.25rem;
@@ -1444,6 +1450,9 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
