@@ -5,3 +5,14 @@
     --font-roboto: 'Roboto', sans-serif;
     --font-weight-extralight: 100;
 }
+
+#libelle-span::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
