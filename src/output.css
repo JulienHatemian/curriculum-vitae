@@ -700,6 +700,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mr-5 {
+    margin-right: calc(var(--spacing) * 5);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
@@ -808,14 +811,14 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-1\/3 {
     width: calc(1/3 * 100%);
+  }
+  .w-\[40px\] {
+    width: 40px;
   }
   .w-full {
     width: 100%;
