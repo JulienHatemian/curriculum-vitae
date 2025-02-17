@@ -69,6 +69,7 @@ function placeSkills(){
     const firstHalf = icons.slice(0, half);
     const secondHalf = icons.slice(half);
 
+    console.log(icons);
     console.log(half);
     console.log(firstHalf);
     console.log(secondHalf);
