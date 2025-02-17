@@ -4,8 +4,26 @@ let i = 0
 let letter = 0;
 let isDeleting = false;
 
+const icons = [
+    "icons8-html-96.png",
+    "icons8-fichier-de-type-css-96.png",
+    "icons8-js-96.png",
+    "icons8-php-logo-96.png",
+    "icons8-mysql-96(1).png",
+    "icons8-github-96.png",
+    "icons8-tailwind-css-96.png",
+    "icons8-bootstrap-96.png",
+    "icons8-symfony-96.png"
+];
+const containerSkill1 = document.getElementById('container-skill-1');
+const containerSkill2 = document.getElementById('container-skill-2');
+const iconSize = 96;
+const padding = 10;
+
 document.addEventListener('DOMContentLoaded', function() {
     typeAndErase();
+
+    placeSkills();
 });
 
 // function printStringByLetter(index){
@@ -36,4 +54,23 @@ function typeAndErase() {
         i = (i + 1) % array.length;
         setTimeout(typeAndErase, 500); // Timeout avant d'écrire le prochain mot
     }
+}
+
+function getRandomPosition(container){
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const x = Math.floor(Math.random() * (containerWidth - iconSize));
+    const y = Math.floor(Math.random() * (containerHeight - iconSize));
+    return {x, y};
+}
+
+function placeSkills(){
+    const half = Math.ceil(icons.length / 2);
+    const firstHalf = icons.slice(0, half);
+    const secondHalf = icons.slice(half);
+
+    console.log(half);
+    console.log(firstHalf);
+    console.log(secondHalf);
+    return;
 }

@@ -808,9 +808,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-1\/2 {
-    height: calc(1/2 * 100%);
-  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -843,9 +840,6 @@
   }
   .w-1\/5 {
     width: calc(1/5 * 100%);
-  }
-  .w-1\/6 {
-    width: calc(1/6 * 100%);
   }
   .w-4xl {
     width: var(--container-4xl);
@@ -1738,10 +1732,6 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
