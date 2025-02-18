@@ -8,7 +8,7 @@ const icons = [
     "icons8-html-96.png",
     "icons8-fichier-de-type-css-96.png",
     "icons8-js-96.png",
-    "icons8-php-logo-96.png",
+    "icons8-php-96.png",
     "icons8-mysql-96(1).png",
     "icons8-github-96.png",
     "icons8-tailwind-css-96.png",
@@ -80,6 +80,15 @@ function displaySkills(container, icons){
         let position;
         position = getRandomPosition(container);
         positions.push(position);
+    
+        const img = document.createElement('img');
+        img.src = `/assets/public/img/icons/${icon}`;
+        img.alt = `logo_${icon.split('-')[1]}`;
+        img.classList.add('icon');
+        img.style.position = 'absolute';
+        img.style.left = `${position.x}px`;
+        img.style.top = `${position.y}px`;
+        container.appendChild(img);
     });
     console.log(positions);
 }
