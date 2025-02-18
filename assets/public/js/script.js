@@ -85,6 +85,7 @@ function displaySkills(container, icons){
             img.style.position = 'absolute';
             img.style.left = `${position.x}px`;
             img.style.top = `${position.y}px`;
+            img.style.animationDelay = `${getRandomDelay(1)}s`;
             container.appendChild(img);
         } else {
             console.warn(`Could not place ${icon} after ${maxAttempts} attempts`);

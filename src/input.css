@@ -19,7 +19,7 @@
 .icon{
     width: 96px;
     height: 96px;
-    animation: float 5s ease-in-out infinite;
+    animation: float 7s linear infinite;
 }
 
 @keyframes float {
