@@ -69,9 +69,17 @@ function placeSkills(){
     const firstHalf = icons.slice(0, half);
     const secondHalf = icons.slice(half);
 
-    console.log(icons);
-    console.log(half);
-    console.log(firstHalf);
-    console.log(secondHalf);
+    displaySkills(containerSkill1, firstHalf);
+    displaySkills(containerSkill2, secondHalf);
     return;
+}
+
+function displaySkills(container, icons){
+    let positions = [];
+    icons.forEach(icon => {
+        let position;
+        position = getRandomPosition(container);
+        positions.push(position);
+    });
+    console.log(positions);
 }
