@@ -98,3 +98,7 @@ function isOverlapping(newPositions, existingPositions){
         Math.abs(newPositions.y - position.y) < iconSize + padding;
     })
 }
+
+function getRandomDelay(maxDelay){
+    return Math.random() * maxDelay;
+}
