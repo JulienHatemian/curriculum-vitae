@@ -808,20 +808,14 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-15 {
-    height: calc(var(--spacing) * 15);
-  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
-  .h-70 {
-    height: calc(var(--spacing) * 70);
-  }
-  .h-90 {
-    height: calc(var(--spacing) * 90);
-  }
   .h-100 {
     height: calc(var(--spacing) * 100);
+  }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
   }
   .h-auto {
     height: auto;
@@ -840,9 +834,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -2320,6 +2311,19 @@
   }
   100% {
     opacity: 1;
+  }
+}
+.icon {
+  width: 96px;
+  height: 96px;
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  from {
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg);
   }
 }
 @keyframes spin {
