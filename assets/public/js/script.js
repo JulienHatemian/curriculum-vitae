@@ -22,7 +22,6 @@ const padding = 10;
 
 document.addEventListener('DOMContentLoaded', function() {
     typeAndErase();
-
     placeSkills();
 });
 
@@ -75,20 +74,39 @@ function placeSkills(){
 }
 
 function displaySkills(container, icons){
+    const maxAttempts = 100;
     let positions = [];
+
     icons.forEach(icon => {
         let position;
-        position = getRandomPosition(container);
-        positions.push(position);
-    
-        const img = document.createElement('img');
-        img.src = `/assets/public/img/icons/${icon}`;
-        img.alt = `logo_${icon.split('-')[1]}`;
-        img.classList.add('icon');
-        img.style.position = 'absolute';
-        img.style.left = `${position.x}px`;
-        img.style.top = `${position.y}px`;
-        container.appendChild(img);
+        let attempts = 0;
+
+        do{
+            position = getRandomPosition(container);
+            attempts++;
+        } while(isOverlapping(position, positions) && attempts < maxAttempts);
+        
+        if(attempts < maxAttempts){
+            positions.push(position);
+        
+            const img = document.createElement('img');
+            img.src = `/assets/public/img/icons/${icon}`;
+            img.alt = `logo_${icon.split('-')[1]}`;
+            img.classList.add('icon');
+            img.style.position = 'absolute';
+            img.style.left = `${position.x}px`;
+            img.style.top = `${position.y}px`;
+            container.appendChild(img);
+        } else {
+            console.warn(`Could not place ${icon} after ${maxAttempts} attempts`);
+        }
     });
     console.log(positions);
+}
+
+function isOverlapping(newPositions, existingPositions){
+    return existingPositions.some(position => {
+        return Math.abs(newPositions.x - position.x) < iconSize + padding &&
+        Math.abs(newPositions.y - position.y) < iconSize + padding;
+    })
 }
