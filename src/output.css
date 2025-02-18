@@ -2298,6 +2298,9 @@
     }
   }
 }
+:root {
+  --animation-translate-value: 7.5px;
+}
 #libelle-span::after {
   content: '|';
   animation: blink 1s infinite;
@@ -2316,14 +2319,14 @@
 .icon {
   width: 96px;
   height: 96px;
-  animation: float 7s linear infinite;
+  animation: float 5s linear infinite;
 }
 @keyframes float {
   from {
-    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+    transform: rotate(0deg) translateY(-5px) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateY(-10px) rotate(-360deg);
+    transform: rotate(360deg) translateY(-5px) rotate(-360deg);
   }
 }
 @keyframes spin {
