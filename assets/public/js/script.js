@@ -18,23 +18,12 @@ const icons = [
 const containerSkill1 = document.getElementById('container-skill-1');
 const containerSkill2 = document.getElementById('container-skill-2');
 const iconSize = 96;
-const padding = 10;
+const padding = 20;
 
 document.addEventListener('DOMContentLoaded', function() {
     typeAndErase();
     placeSkills();
 });
-
-// function printStringByLetter(index){
-//     let i=0;
-//     let intervalId = setInterval(function(){
-//         span.innerHTML += array[index].charAt(i);
-//         i++;
-//         if(i === array[index].length){
-//             clearInterval(intervalId);
-//         }
-//     }, 50);
-// }
 
 function typeAndErase() {
     if (!isDeleting && letter < array[i].length) {
@@ -101,7 +90,6 @@ function displaySkills(container, icons){
             console.warn(`Could not place ${icon} after ${maxAttempts} attempts`);
         }
     });
-    console.log(positions);
 }
 
 function isOverlapping(newPositions, existingPositions){
